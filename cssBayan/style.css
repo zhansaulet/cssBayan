@@ -17,6 +17,7 @@ h1 {
   font-size: 36px;
 }
 
+
 .tab:nth-child(1) {
   border-top: 1px solid #2c3e50;
   border-bottom: 1px solid #2c3e50;
@@ -42,7 +43,6 @@ h1 {
   width: 20px;
   height: 20px;
 }
-
 
 .accordion-image {
   width: 350px;
@@ -70,4 +70,94 @@ details[open] summary {
 
 details > section {
   text-align: center;
+}
+
+details[open] > summary > img {
+  content: url(img/close.png);
+}
+
+@media (max-width: 920px){
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 820px){
+  .container {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 1.875em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .accordion-image {
+    width: 90%;
+  }
+}
+
+@media (min-width: 500px) {
+  .tabs:hover > .tab > details > summary > img{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+  }
+
+.tabs > .tab > details > summary > img{
+opacity: 0;
+transition: all 0.5s ease-in;
+}
+
+.tabs > .tab > details > summary > h2{
+color: #4169E1;
+}
+
+.tabs > .tab > details[open] > summary > h2{
+color: #000;
+}
+
+.tabs:hover > .tab > details > summary > h2{
+color: #000;
+}
+
+.tabs > .tab > details > summary > img{
+opacity: 0;
+transition: all 0.5s ease-in;
+}
+
+.tab:hover > details > section {
+  display: block;
+}
+
+}
+
+@media (max-width: 320px){
+  .container {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .accordion-image {
+    width: 90%;
+  }
 }
